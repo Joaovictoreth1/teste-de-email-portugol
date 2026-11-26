@@ -1,21 +1,21 @@
 programa {
- cadeia email
- cadeia senha
+  funcao inicio() {
+    cadeia email, codigo
+    escreva("Digite o e-mail de demonstração: ")
+    leia(email)
 
- funcao inicio(){
-  email = "teste2@teste.com"
-  senha = "teste123"
-  se (email =="teste@teste.com"){
-
-  se (senha =="teste123"){
-  escreva("login efetuado com sucesso!")
-  }senao{
-    escreva("A senha está incorreta!")
+    se (email == "") {
+      escreva("Nenhum e-mail informado.")
+    } senao se (email != "aluno@example.com") {
+      escreva("Use o e-mail de demonstração: aluno@example.com")
+    } senao {
+      escreva("Digite o código de demonstração: ")
+      leia(codigo)
+      se (codigo == "aula") {
+        escreva("Login de demonstração efetuado!")
+      } senao {
+        escreva("Código de demonstração incorreto.")
+      }
+    }
   }
-  
-  }senao{
-    escreva("E-mail inválido")
- }
- 
-}
 }
